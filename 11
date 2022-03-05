@@ -1,0 +1,61 @@
+03/05 16:14:30
+express-itrg-001
+03/05 16:14:30
+express-itrg-001
+> wxcloudrun-express@1.0.0 start /app
+03/05 16:14:30
+express-itrg-001
+> node index.js
+03/05 16:14:30
+express-itrg-001
+03/05 16:14:31
+express-itrg-001
+Executing (default): CREATE TABLE IF NOT EXISTS `Counters` (`id` INTEGER NOT NULL auto_increment , `count` INTEGER NOT NULL DEFAULT 1, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+03/05 16:14:31
+express-itrg-001
+Executing (default): SHOW FULL COLUMNS FROM `Counters`;
+03/05 16:14:31
+express-itrg-001
+Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'Counters' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='nodejs_demo' AND REFERENCED_TABLE_NAME IS NOT NULL;
+03/05 16:14:31
+express-itrg-001
+Executing (default): ALTER TABLE `Counters` CHANGE `count` `count` INTEGER NOT NULL DEFAULT 1;
+03/05 16:14:31
+express-itrg-001
+Executing (default): ALTER TABLE `Counters` CHANGE `createdAt` `createdAt` DATETIME NOT NULL;
+03/05 16:14:31
+express-itrg-001
+Executing (default): ALTER TABLE `Counters` CHANGE `updatedAt` `updatedAt` DATETIME NOT NULL;
+03/05 16:14:31
+express-itrg-001
+Executing (default): SHOW INDEX FROM `Counters`
+03/05 16:14:31
+express-itrg-001
+启动成功 80
+03/05 16:33:12
+express-itrg-001
+(node:24) UnhandledPromiseRejectionWarning: SequelizeConnectionError: CynosDB serverless instance is resuming, please try connecting again
+03/05 16:33:12
+express-itrg-001
+    at ConnectionManager.connect (/app/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:126:17)
+03/05 16:33:12
+express-itrg-001
+    at runMicrotasks ()
+03/05 16:33:12
+express-itrg-001
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+03/05 16:33:12
+express-itrg-001
+    at async ConnectionManager._connect (/app/node_modules/sequelize/lib/dialects/abstract/connection-manager.js:318:24)
+03/05 16:33:12
+express-itrg-001
+(Use `node --trace-warnings ...` to show where the warning was created)
+03/05 16:33:12
+express-itrg-001
+(node:24) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+03/05 16:33:12
+express-itrg-001
+(node:24) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+03/05 16:34:02
+express-itrg-001
+POST /api/count - - - - ms
